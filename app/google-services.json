@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "841736282077",
+    "firebase_url": "https://padmavati392020.firebaseio.com",
+    "project_id": "padmavati392020",
+    "storage_bucket": "padmavati392020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841736282077:android:0000b4b4291d30172ea034",
+        "android_client_info": {
+          "package_name": "com.madappsdevlopers.padmavatisalt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841736282077-pu7611stuph5njr43beir18k04p3dif0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUqTc-EteVlcYa5AMj5l9QQm8xbEMQBFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841736282077-pu7611stuph5njr43beir18k04p3dif0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

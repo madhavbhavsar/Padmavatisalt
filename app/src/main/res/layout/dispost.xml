@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/disentryname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="Order No.  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/disentrynumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=""
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disentryname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/disdatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Order's Date "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/dispononame"
+                app:layout_constraintTop_toBottomOf="@+id/dispononame" />
+
+            <TextView
+                android:id="@+id/disdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Date"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disdatte"
+                app:layout_constraintTop_toBottomOf="@+id/dispononame" />
+
+            <TextView
+                android:id="@+id/dispononame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="P.O. No. "
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/disentryname"
+                app:layout_constraintTop_toBottomOf="@+id/disentryname" />
+
+            <TextView
+                android:id="@+id/dispono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:hint="          "
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/dispononame"
+                app:layout_constraintTop_toBottomOf="@+id/disentryname" />
+
+            <TextView
+                android:id="@+id/discustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:text="Customer Name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disnammee"
+                app:layout_constraintTop_toBottomOf="@+id/disdate" />
+
+            <TextView
+                android:id="@+id/discustomerAddress"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Address"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/discustomerName"
+                app:layout_constraintTop_toBottomOf="@+id/discustomerName" />
+
+            <TextView
+                android:id="@+id/dismobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile No."
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/dismobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/disnammee" />
+
+            <TextView
+                android:id="@+id/disprrolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Product List"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/dismobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/dismobbiiinamee" />
+
+
+            <LinearLayout
+                android:id="@+id/dislinelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/disprrolist"
+                app:layout_constraintTop_toBottomOf="@+id/disprrolist">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 1) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 2) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dislinelay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay2"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 3) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay3"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 4) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay4"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 5) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay5"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 6) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay6"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 7) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay7"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 8) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay8"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 9) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dislinelay10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay9"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disarrow10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 10) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/disproductName10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="Product Name"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/disbag10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/disproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:id="@+id/distextView310"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disbag"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+                        android:id="@+id/disweight10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:maxLength="7"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/distextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/disweight"
+                        app:layout_constraintTop_toBottomOf="@+id/disproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/distotalBname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Bags  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/dislinelay10"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay10" />
+
+            <TextView
+                android:id="@+id/distotalB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLength="7"
+                android:text="Total Bags  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/distotalBname"
+                app:layout_constraintTop_toBottomOf="@+id/dislinelay10" />
+
+            <TextView
+                android:id="@+id/distotalWname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Weight  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/distotalBname"
+                app:layout_constraintTop_toBottomOf="@+id/distotalBname" />
+
+            <TextView
+                android:id="@+id/distotalW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLength="7"
+                android:text="Total Weight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/distotalWname"
+                app:layout_constraintTop_toBottomOf="@+id/distotalB" />
+
+
+            <TextView
+                android:id="@+id/distotalWww"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLength="7"
+                android:text=" Tons"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/distotalW"
+                app:layout_constraintTop_toBottomOf="@+id/distotalB" />
+
+            <TextView
+                android:id="@+id/distotalWname1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Dispatch Weight  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/distotalWname"
+                app:layout_constraintTop_toBottomOf="@+id/distotalWname" />
+
+            <TextView
+                android:id="@+id/distotalW1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLength="7"
+                android:text="Dispatch Weight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/distotalWname1"
+                app:layout_constraintTop_toBottomOf="@+id/distotalW" />
+
+            <TextView
+                android:id="@+id/distotalWww1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLength="7"
+                android:text=" Tons"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/distotalW1"
+                app:layout_constraintTop_toBottomOf="@+id/distotalW" />
+
+            <TextView
+                android:id="@+id/disdellladddnaame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Address  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/distotalWname1"
+                app:layout_constraintTop_toBottomOf="@+id/distotalWname1" />
+
+            <TextView
+                android:id="@+id/disdelAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Address"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disdellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/distotalW1" />
+
+            <TextView
+                android:id="@+id/disdellldatenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Date  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/disdellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/disdellladddnaame" />
+
+            <TextView
+                android:id="@+id/disdeldate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Date"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disdellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/disdelAddress" />
+
+
+            <Button
+                android:id="@+id/undisbutton"
+                android:layout_width="101dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFAB00"
+                android:text="Undispatch"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disnotes"
+                app:layout_goneMarginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/disnammee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Name  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/disdatte"
+                app:layout_constraintTop_toBottomOf="@+id/disdatte" />
+
+            <TextView
+                android:id="@+id/dismobbiiinamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/disnammee"
+                app:layout_constraintTop_toBottomOf="@+id/disnammee" />
+
+            <TextView
+                android:id="@+id/actualfreightnamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Actual Freight  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/disdellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/disdellldatenamee" />
+
+            <TextView
+                android:id="@+id/disactualFreight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Actual Freight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/actualfreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/disdellldatenamee" />
+
+            <TextView
+                android:id="@+id/advanceenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Advance  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/actualfreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/actualfreightnamee" />
+
+            <TextView
+                android:id="@+id/disadvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Advance"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/advanceenamee"
+                app:layout_constraintTop_toBottomOf="@+id/disactualFreight" />
+
+            <TextView
+                android:id="@+id/totllafreightnamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Freight  "
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/advanceenamee"
+                app:layout_constraintTop_toBottomOf="@+id/advanceenamee" />
+
+            <TextView
+                android:id="@+id/distotalFreight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="total Freight"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/totllafreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/disadvance" />
+
+
+            <TextView
+                android:id="@+id/transporterrnamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Transporter Name  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/totllafreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/totllafreightnamee" />
+
+            <TextView
+                android:id="@+id/distransportername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="transporter name"
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/transporterrnamee"
+                app:layout_constraintTop_toBottomOf="@+id/distotalFreight" />
+
+            <TextView
+                android:id="@+id/ddrivermobnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Driver Mobile  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/transporterrnamee"
+                app:layout_constraintTop_toBottomOf="@+id/transporterrnamee" />
+
+            <TextView
+                android:id="@+id/disdrivermobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Driver Mobile No."
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/ddrivermobnum"
+                app:layout_constraintTop_toBottomOf="@+id/distransportername" />
+
+            <TextView
+                android:id="@+id/vehiclenoname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Vehicle No.  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/ddrivermobnum"
+                app:layout_constraintTop_toBottomOf="@+id/ddrivermobnum" />
+
+            <TextView
+                android:id="@+id/disvehicleno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Vehicle No."
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/vehiclenoname"
+                app:layout_constraintTop_toBottomOf="@+id/disdrivermobile" />
+
+            <TextView
+                android:id="@+id/dispatchdatenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:text="Dispatch Date  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/vehiclenoname"
+                app:layout_constraintTop_toBottomOf="@+id/vehiclenoname" />
+
+            <TextView
+                android:id="@+id/disdispatchdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Dispatch date"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/dispatchdatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/disvehicleno" />
+
+            <TextView
+                android:id="@+id/disnoteeenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:text="Notes / Remark  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/dispatchdatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/dispatchdatenamee" />
+
+            <TextView
+                android:id="@+id/disnotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint=""
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/disnoteeenamee"
+                app:layout_constraintTop_toBottomOf="@+id/disdispatchdate" />
+
+
+            <ImageView
+                android:id="@+id/sharebtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeShareDrawable" />
+
+            <ImageView
+                android:id="@+id/printbtn"
+                android:layout_width="47dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toStartOf="@+id/sharebtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/printbtn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

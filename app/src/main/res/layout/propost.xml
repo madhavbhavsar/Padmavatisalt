@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+
+            <TextView
+                android:id="@+id/proproductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:text="Product Name"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/propnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="weight kg"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/cuscustomerName"
+                app:layout_constraintTop_toBottomOf="@+id/cuscustomerName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/editpro"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="#0091EA"
+                android:text="Edit"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/deletepro"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="#D50000"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/edit"
+                app:layout_constraintTop_toBottomOf="@+id/dellldatenamee" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

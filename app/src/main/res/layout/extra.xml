@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/entryname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="Order No.  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/entrynumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=""
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/entryname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/datte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Today's Date  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/entryname"
+                app:layout_constraintTop_toBottomOf="@+id/entryname" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Date"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/datte"
+                app:layout_constraintTop_toBottomOf="@+id/entryname" />
+
+            <TextView
+                android:id="@+id/pononame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="P.O. No."
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/pono"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:hint="########"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Customer Name"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                app:layout_constraintStart_toEndOf="@+id/nammee"
+                app:layout_constraintTop_toBottomOf="@+id/date" />
+
+            <TextView
+                android:id="@+id/customerAddress"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Address"
+                android:textSize="18dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/customerName"
+                app:layout_constraintTop_toBottomOf="@+id/customerName" />
+
+            <TextView
+                android:id="@+id/mobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile No."
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/mobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/nammee" />
+
+            <TextView
+                android:id="@+id/prrolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Product List"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="@+id/mobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/mobbiiinamee" />
+
+
+            <LinearLayout
+                android:id="@+id/linelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/prrolist"
+                app:layout_constraintTop_toBottomOf="@+id/prrolist">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay"
+                app:layout_constraintTop_toBottomOf="@+id/linelay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linelay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay2"
+                app:layout_constraintTop_toBottomOf="@+id/linelay2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay3"
+                app:layout_constraintTop_toBottomOf="@+id/linelay3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay4"
+                app:layout_constraintTop_toBottomOf="@+id/linelay4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay5"
+                app:layout_constraintTop_toBottomOf="@+id/linelay5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay6"
+                app:layout_constraintTop_toBottomOf="@+id/linelay6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay7"
+                app:layout_constraintTop_toBottomOf="@+id/linelay7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay8"
+                app:layout_constraintTop_toBottomOf="@+id/linelay8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linelay10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linelay9"
+                app:layout_constraintTop_toBottomOf="@+id/linelay9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/arrow10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="==>"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/productName10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bag10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="@+id/productName"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:id="@+id/textView310"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bags"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/bag"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+                        android:id="@+id/weight10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/weight"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/delAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Address"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/dellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/linelay10" />
+
+            <TextView
+                android:id="@+id/deldate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Date"
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/dellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/delAddress" />
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#2962FF"
+                android:text="Edit"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/dellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/dellldatenamee" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="4dp"
+                android:background="#D50000"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@+id/edit"
+                app:layout_constraintTop_toBottomOf="@+id/dellldatenamee" />
+
+            <Button
+                android:id="@+id/dispatchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="12dp"
+                android:background="#00C853"
+                android:text="Dispatch"
+                android:textColor="#FFFFFF"
+                android:textSize="11.61sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/delete"
+                app:layout_constraintTop_toBottomOf="@+id/dellldatenamee" />
+
+            <TextView
+                android:id="@+id/nammee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Name  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/datte"
+                app:layout_constraintTop_toBottomOf="@+id/datte" />
+
+            <TextView
+                android:id="@+id/mobbiiinamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/nammee"
+                app:layout_constraintTop_toBottomOf="@+id/nammee" />
+
+            <TextView
+                android:id="@+id/dellladddnaame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Address  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/linelay10"
+                app:layout_constraintTop_toBottomOf="@+id/linelay10" />
+
+            <TextView
+                android:id="@+id/dellldatenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Date  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/dellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/dellladddnaame" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rementryname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="Order No.  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rementrynumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=""
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/rementryname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/remdatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order's Date  "
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/rempononame"
+                app:layout_constraintTop_toBottomOf="@+id/rempononame" />
+
+            <TextView
+                android:id="@+id/remdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Date"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remdatte"
+                app:layout_constraintTop_toBottomOf="@+id/rempononame" />
+
+            <TextView
+                android:id="@+id/rempononame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P.O. No. "
+                android:layout_marginTop="4dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/rementryname"
+                app:layout_constraintTop_toBottomOf="@+id/rementryname" />
+
+            <TextView
+                android:id="@+id/rempono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" "
+                android:textSize="18sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/rempononame"
+                app:layout_constraintTop_toBottomOf="@+id/rementryname" />
+
+            <TextView
+                android:id="@+id/remcustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="bottom"
+                android:text="Customer Name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remnammee"
+                app:layout_constraintTop_toBottomOf="@+id/remdate" />
+
+            <TextView
+                android:id="@+id/remcustomerAddress"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Address"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/remcustomerName"
+                app:layout_constraintTop_toBottomOf="@+id/remcustomerName" />
+
+            <TextView
+                android:id="@+id/remmobileNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile No."
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remmobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/remnammee" />
+
+            <TextView
+                android:id="@+id/remprrolist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Product List"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remmobbiiinamee"
+                app:layout_constraintTop_toBottomOf="@+id/remmobbiiinamee" />
+
+
+            <LinearLayout
+                android:id="@+id/remlinelay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remprrolist"
+                app:layout_constraintTop_toBottomOf="@+id/remprrolist">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 1) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 2) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName2"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/remlinelay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay2"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 3) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName3"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay3"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 4) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName4"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay4"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 5) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName5"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay5"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 6) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName6"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay6"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 7) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName7"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay7"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 8) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName8"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay8"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 9) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName9"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remlinelay10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay9"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarrow10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text=" 10) "
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/remproductName10"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Product Name"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rembag10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/remproductName"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:id="@+id/remtextView310"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Bags"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/rembag"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+                        android:id="@+id/remweight10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="4dp"
+                        android:text=""
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remtextView3"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="  Tons"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/remweight"
+                        app:layout_constraintTop_toBottomOf="@+id/remproductName" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/remtotalBname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Bags  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remlinelay10"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay10" />
+            <TextView
+                android:id="@+id/remtotalB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Bags  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remtotalBname"
+                app:layout_constraintTop_toBottomOf="@+id/remlinelay10" />
+
+            <TextView
+                android:id="@+id/remtotalWname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Weight  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remtotalBname"
+                app:layout_constraintTop_toBottomOf="@+id/remtotalBname" />
+            <TextView
+                android:id="@+id/remtotalW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Total Weight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remtotalWname"
+                app:layout_constraintTop_toBottomOf="@+id/remtotalB" />
+
+            <TextView
+                android:id="@+id/remapproxfreightnamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Approx. Freight  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remtotalWname"
+                app:layout_constraintTop_toBottomOf="@+id/remtotalWname" />
+            <TextView
+                android:id="@+id/remapproxFreight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Approx. Freight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remapproxfreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/remtotalW" />
+
+            <TextView
+                android:id="@+id/remdellladddnaame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Address  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remapproxfreightnamee"
+                app:layout_constraintTop_toBottomOf="@+id/remapproxfreightnamee" />
+
+            <TextView
+                android:id="@+id/remdelAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Address"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remdellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/remapproxFreight" />
+
+
+            <TextView
+                android:id="@+id/remdellldatenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Del. Date  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remdellladddnaame"
+                app:layout_constraintTop_toBottomOf="@+id/remdellladddnaame" />
+
+            <TextView
+                android:id="@+id/remdeldate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Delivery Date"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remdellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/remdelAddress" />
+
+            <TextView
+                android:id="@+id/remnotenamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Notes / Remark -"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remdellldatenamee"
+                app:layout_constraintTop_toBottomOf="@+id/remdellldatenamee" />
+
+            <TextView
+                android:id="@+id/remnotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text=""
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/remnotenamee"
+                app:layout_constraintTop_toBottomOf="@+id/remdeldate" />
+
+
+            <Button
+                android:id="@+id/restorebtn"
+                android:layout_width="101dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFAB00"
+                android:text="Restore"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reason" />
+
+            <TextView
+                android:id="@+id/remnammee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Name  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remdatte"
+                app:layout_constraintTop_toBottomOf="@+id/remdatte" />
+
+            <TextView
+                android:id="@+id/remmobbiiinamee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remnammee"
+                app:layout_constraintTop_toBottomOf="@+id/remnammee" />
+
+
+
+
+            <TextView
+                android:id="@+id/ddrivermobnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Reason  "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/remnotenamee"
+                app:layout_constraintTop_toBottomOf="@+id/remnotenamee" />
+
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Reason"
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/ddrivermobnum"
+                app:layout_constraintTop_toBottomOf="@+id/remnotes" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

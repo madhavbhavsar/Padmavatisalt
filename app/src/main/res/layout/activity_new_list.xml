@@ -1,0 +1,1747 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="17dp"
+        tools:context=".NewList">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/entryname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order No.  "
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/entrynumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/todaysdatee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Today's Date"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke"
+            android:paddingLeft="10dp"
+            android:ems="10"
+            android:text="Date"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:id="@+id/cusnamee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Name*"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+        <AutoCompleteTextView
+            android:id="@+id/customerName"
+            android:paddingLeft="10dp"
+
+            android:paddingTop="5dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke"
+            android:completionThreshold="0"
+            android:ems="10"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords|textMultiLine"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/mobinamee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Mobile"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/cusnamee"
+            app:layout_constraintTop_toBottomOf="@+id/cusnamee" />
+
+        <EditText
+            android:id="@+id/mobileNo"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke"
+            android:ems="10"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toBottomOf="@+id/customerName" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/prroducct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1st Product*"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:text="0"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="10dp"
+                        android:text="0"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2nd Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName2"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber2"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag2"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight2"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="9"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3rd Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName3"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber3"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag3"
+                        android:paddingLeft="10dp"
+                        android:maxLength="9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:layout_marginRight="18dp"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight3"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="4th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName4"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber4"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag4"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:layout_marginRight="18dp"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight4"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="9"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="5th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName5"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber5"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee5"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee5"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag5"
+                        android:paddingLeft="10dp"
+                        android:maxLength="9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:layout_marginRight="18dp"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight5"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="9"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="6th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName6"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber6"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee6"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee6"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag6"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:layout_marginRight="18dp"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight6"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="9"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="7th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName7"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber7"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee7"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee7"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag7"
+                        android:paddingLeft="10dp"
+                        android:maxLength="9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="18dp"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight7"
+                        android:paddingLeft="10dp"
+                        android:maxLength="9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="8th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName8"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber8"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee8"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee8"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag8"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLength="9"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:layout_marginRight="18dp"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight8"
+                        android:paddingLeft="10dp"
+                        android:maxLength="9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="9th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName9"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber9"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee9"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag9"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:layout_marginRight="18dp"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight9"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/prroducct10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="10th Product*"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/mobinamee"
+                    app:layout_constraintTop_toBottomOf="@+id/mobinamee" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/productName10"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:completionThreshold="0"
+                        android:ems="10"
+                        android:hint=""
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/pnumber"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+                    <EditText
+                        android:id="@+id/pnumber10"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bagee10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bag"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/prroducct"
+                        app:layout_constraintTop_toBottomOf="@+id/prroducct" />
+
+                    <TextView
+                        android:id="@+id/weightee10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Weight(in Ton)"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/bagee"
+                        app:layout_constraintTop_toBottomOf="@+id/bagee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/bag10"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:maxLength="9"
+                        android:imeOptions="actionNext"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="18dp"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+                    <EditText
+                        android:id="@+id/weight10"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:maxLength="9"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:hint=""
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guideline13"
+                        app:layout_constraintTop_toBottomOf="@+id/bag" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addbtn10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:text="Add"
+                    android:background="@drawable/buttononline"
+                    android:textColor="#2f3136"
+                    android:fontFamily="@font/acmeregular"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/pnumber" />
+
+                <TextView
+                    android:id="@+id/freighttnamee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Approx Freight"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="@+id/cusnamee"
+                    app:layout_constraintTop_toBottomOf="@+id/cusnamee" />
+
+                <EditText
+                    android:id="@+id/approxFreight"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke"
+                    android:imeOptions="actionNext"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintStart_toStartOf="@+id/guideline13"
+                    app:layout_constraintTop_toBottomOf="@+id/customerName" />
+                <TextView
+                    android:id="@+id/delladdres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Address"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/delAddress"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="0"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:hint=""
+                    android:inputType="textPostalAddress"
+                    android:textSize="20sp"
+                    android:background="@drawable/stroke"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/pononame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="P.O. No. "
+                        android:layout_marginTop="8dp"
+                        android:textSize="17sp"
+                        app:layout_constraintStart_toStartOf="@+id/guideline12"
+                        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+                    <EditText
+                        android:id="@+id/pono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/stroke"
+                        android:ems="10"
+                        android:paddingLeft="10dp"
+                        android:inputType="textPersonName"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintHorizontal_bias="0.38"
+                        app:layout_constraintStart_toEndOf="@+id/pononame"
+                        app:layout_constraintTop_toTopOf="@+id/guideline2" /> </LinearLayout>
+                <TextView
+                    android:id="@+id/delldatee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Date [Click to change]"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+                <TextView
+                    android:id="@+id/deldate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:background="@drawable/stroke"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/delladdres"
+                    app:layout_constraintTop_toBottomOf="@+id/delladdres" />
+
+                <TextView
+                    android:id="@+id/note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes / Remarks"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="5dp"
+
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:background="@drawable/stroke"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/delladdres"
+                    app:layout_constraintTop_toBottomOf="@+id/delladdres" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    >
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Submit"
+                        android:background="@drawable/buttononline"
+                        android:textColor="#2f3136"
+                        android:fontFamily="@font/acmeregular"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/deldate"
+                        />
+
+                    <Button
+                        android:id="@+id/pendinglist"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/buttononline"
+                        android:textColor="#2f3136"
+                        android:fontFamily="@font/acmeregular"
+                        android:layout_marginLeft="20dp"
+                        android:text="Pending List"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toBottomOf="@+id/deldate" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
