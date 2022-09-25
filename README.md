@@ -10,6 +10,8 @@ Features:-
 3. Notification feature enabled with Firebase Cloud Messaging API.
 4. Login and Authentication feature with Firebase Authentication API.
 
+LinkedIn Profile :- https://www.linkedin.com/in/madhavbhavsar/
+
 ![1](https://user-images.githubusercontent.com/69354473/192162345-9db0d327-6fd9-4f69-989f-43d4b4fb6b44.jpg)
 ![2](https://user-images.githubusercontent.com/69354473/192162348-f8f9c26e-ee11-46d9-b354-c5727135c978.jpg)
 ![3](https://user-images.githubusercontent.com/69354473/192162355-58573832-2567-443e-8dd6-114e67492525.jpg)
