@@ -10,10 +10,9 @@ Features:-
 3. Notification feature enabled with Firebase Cloud Messaging API.
 4. Login and Authentication feature with Firebase Authentication API.
 
-
-![1](https://user-images.githubusercontent.com/69354473/192161863-5f788c8a-0254-4ec7-b7cb-311064413b97.jpg)
-![2](https://user-images.githubusercontent.com/69354473/192162060-9fab3f54-8192-46d5-803d-b4f14a6e3b6a.jpg)
-![3](https://user-images.githubusercontent.com/69354473/192162068-54681204-90f6-41bb-93c8-0fd5361fa35b.jpg)
-
-![4](https://user-images.githubusercontent.com/69354473/192162071-a277b1eb-b11a-45d3-a3e0-a388feb5b4d2.jpg)
-![5](https://user-images.githubusercontent.com/69354473/192162073-29efba9d-f149-4bb1-a992-002f1cfc950e.jpg)
+![1](https://user-images.githubusercontent.com/69354473/192162345-9db0d327-6fd9-4f69-989f-43d4b4fb6b44.jpg)
+![2](https://user-images.githubusercontent.com/69354473/192162348-f8f9c26e-ee11-46d9-b354-c5727135c978.jpg)
+![3](https://user-images.githubusercontent.com/69354473/192162355-58573832-2567-443e-8dd6-114e67492525.jpg)
+<br>
+![4](https://user-images.githubusercontent.com/69354473/192162360-29d65403-c1ce-4a50-bf20-a768183d6eee.jpg)
+![5](https://user-images.githubusercontent.com/69354473/192162363-7aeba2e4-57a2-49dc-90cb-7e0a4e5249b4.jpg)
