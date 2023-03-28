@@ -10,7 +10,7 @@ Features:-
 3. Notification feature enabled with Firebase Cloud Messaging API.
 4. Login and Authentication feature with Firebase Authentication API.
 
-Youtube Video Link :- https://www.youtube.com/watch?v=cPn6PAUynPg <br>
+Youtube Video Link :- https://youtu.be/b4oy-FaxGOY <br>
 LinkedIn Profile :- https://www.linkedin.com/in/madhavbhavsar/
 
 ![1](https://user-images.githubusercontent.com/69354473/192162345-9db0d327-6fd9-4f69-989f-43d4b4fb6b44.jpg)
